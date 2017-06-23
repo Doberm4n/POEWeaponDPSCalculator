@@ -18,8 +18,8 @@ ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
 
 form = None
 formAbout = None
-version = '0.9.0'
-link = '<a href="https://github.com/Doberm4n/POEWeaponDPSCalculator">Github</a>'
+version = '0.9.1'
+link = '<a href="https://github.com/Doberm4n/POEWeaponDPSCalculator">GitHub</a>'
 
 class POEWeaponDPSApp(QtGui.QMainWindow, GUIMain.Ui_MainWindow):
 
@@ -101,7 +101,7 @@ def main():
     appIco.addFile(':Device-blockdevice-cubes-icon32.png', QtCore.QSize(32,32))
     app.setWindowIcon(appIco)
     form = POEWeaponDPSApp()
-    form.setWindowFlags(QtCore.Qt.WindowTitleHint)
+    #form.setWindowFlags(QtCore.Qt.WindowTitleHint)
     form.show()
     app.exec_()
 
