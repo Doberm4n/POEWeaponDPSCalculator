@@ -101,7 +101,6 @@ def main():
     appIco.addFile(':Device-blockdevice-cubes-icon32.png', QtCore.QSize(32,32))
     app.setWindowIcon(appIco)
     form = POEWeaponDPSApp()
-    #form.setWindowFlags(QtCore.Qt.WindowTitleHint)
     form.show()
     app.exec_()
 

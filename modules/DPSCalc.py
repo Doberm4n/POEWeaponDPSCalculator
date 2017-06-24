@@ -9,7 +9,6 @@ class DPSCalc():
     def __init__(self):
         self.patternStringQuality = 'Quality: +'
         self.patternStringPhysical = 'Physical Damage:'
-        # self.patternStringElemental = 'Elemental Damage:'
         self.patternStringChaos = 'Chaos Damage:'
         self.patternStringFire = 'Adds\s\d+\s+to\s\d+\s+Fire Damage'
         self.patternStringLightning = 'Adds\s\d+\s+to\s\d+\s+Lightning Damage'
@@ -65,12 +64,6 @@ class DPSCalc():
                     self.valuePhysical = round((int(filter(str.isdigit, str(self.values[0]))) + int(filter(str.isdigit, str(self.values[1])))) / 2, 1)
             else:
                 self.valuePhysical = 0
-            # self.searchPattern(self.patternStringElemental, data)
-            # if self.modifier:
-            #     self.Split(True)
-            #     self.valueElemental = round((int(filter(str.isdigit, str(self.values[0]))) + int(filter(str.isdigit, str(self.values[1])))) / 2 * self.valueAttacksPerSecond, 1)
-            # else:
-            #     self.valueElemental = 0
             self.searchPattern(self.patternStringChaos, data)
             if self.modifier:
                 self.Split(True)
